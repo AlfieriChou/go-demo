@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "name" : "Alfieri",
+      "type" : "Chou",
+      "age" : 18,
+      "social" : {
+        "facebook" : "https://facebook.com",
+        "twitter" : "https://twitter.com"
+      }
+    },
+    {
+      "name" : "heaken",
+      "type" : "Author",
+      "age" : 17,
+      "social" : {
+        "facebook" : "https://facebook.com",
+        "twitter" : "https://twitter.com"
+      }
+    }
+  ]
+}
