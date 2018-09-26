@@ -5,6 +5,11 @@ import (
   // "time"
 )
 
+type Vertex struct {
+  x int
+  y int
+}
+
 func main() {
   fmt.Println(Add(12, 15))
   fmt.Println(Add2(13, 16))
@@ -13,6 +18,9 @@ func main() {
   fmt.Println(Split(18))
   TestWhile()
   TestForContinue()
+  ForEach()
+  SwitchTest()
+  testVertex()
   // go f(0)
   // time.Sleep(time.Second * 1)
 }
@@ -60,4 +68,31 @@ func TestForContinue() {
     }
     fmt.Printf("你猜猜 a 的值为 : %d\n", a)
   }
+}
+
+func ForEach() {
+  studentGrades := [3]int{50, 43, 25}
+  for _, grade := range studentGrades {
+    fmt.Println("Grage: ", grade)
+  }
+}
+
+func SwitchTest() {
+  choice := 'Y'
+  switch(choice) { 
+    case 'Y' : 
+      fmt.Println("Yes")
+    case 'M' : 
+      fmt.Println("Maybe")
+    case 'N' : 
+      fmt.Println("No")
+    default: 
+      fmt.Println("Invalid response")
+  }
+}
+
+func testVertex() {
+  v := Vertex{1, 2}
+  v.x = 4
+  fmt.Println(v)
 }
