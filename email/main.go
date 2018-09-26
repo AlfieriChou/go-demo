@@ -8,7 +8,7 @@ import (
 
 func main() {
   e := email.NewEmail()
-  e.From = "Jordan Wright <alfierichou@gmail.com>"
+  e.From = "AlfieriChou <alfierichou@gmail.com>"
   e.To = []string{"904887302@qq.com"}
   e.Subject = "Awesome Subject"
   e.Text = []byte("Text Body is, of course, supported!")
