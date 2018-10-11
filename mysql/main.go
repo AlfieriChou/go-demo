@@ -8,7 +8,7 @@ import (
 )
 
 type Admin struct {
-	ID   int    `json:"id"`
+  ID   int    `json:"id"`
   Name string `json:"name"`
   Phone string `json:"phone"`
 }
@@ -22,8 +22,8 @@ func main() {
   defer db.Close()
 
   results, err := db.Query("SELECT id, name, phone FROM admin")
-	if err != nil {
-		panic(err.Error())
+  if err != nil {
+    panic(err.Error())
   }
   fmt.Println(results)
   for results.Next() {
