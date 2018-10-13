@@ -25,7 +25,7 @@ type Exception struct {
   Message string `json:"message"`
 }
 
-func CreateToken(w http.ResponseWriter, req *http.Request) {
+func Login(w http.ResponseWriter, req *http.Request) {
   var user User
   _ = json.NewDecoder(req.Body).Decode(&user)
   token := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
@@ -40,8 +40,8 @@ func CreateToken(w http.ResponseWriter, req *http.Request) {
 }
 
 func Protected(w http.ResponseWriter, req *http.Request) {
-  params := req.URL.Query()
-  token, _ := jwt.Parse(params["token"][0], func(token *jwt.Token) (interface{}, error) {
+  authCode := req.Header.Get("x-access-token")
+  token, _ := jwt.Parse(authCode, func(token *jwt.Token) (interface{}, error) {
     if _, ok := token.Method.(*jwt.SigningMethodHMAC); !ok {
       return nil, fmt.Errorf("There was an error")
     }
