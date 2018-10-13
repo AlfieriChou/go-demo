@@ -3,12 +3,8 @@ package controller
 import (
   "encoding/json"
   "fmt"
-  // "log"
   "net/http"
-  // "strings"
   "github.com/dgrijalva/jwt-go"
-  // "github.com/gorilla/context"
-  // "github.com/gorilla/mux"
   "github.com/mitchellh/mapstructure"
 )
 
