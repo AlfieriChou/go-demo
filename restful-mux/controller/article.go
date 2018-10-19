@@ -35,7 +35,7 @@ func ShowArticle(w http.ResponseWriter, r *http.Request) {
   }
   i, err := strconv.Atoi(key)
   if err != nil {
-    fmt.Println(err)
+    panic(err.Error())
   }
   if i < 2 {
     fmt.Println(articles[i - 1])
